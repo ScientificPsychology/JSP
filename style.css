@@ -119,9 +119,10 @@ img {
 }
 
 .about-right {
-    font-size: 1.05rem;
-    line-height: 1.5;
+    grid-column: 2;
+    grid-row: 1 / span 4;
 }
+
 
 .about-right h2 {
     font-size: 1.55rem;
