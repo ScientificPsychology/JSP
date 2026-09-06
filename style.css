@@ -410,19 +410,21 @@ html, body {
     }
 
     /* Show the hamburger button */
+.hamburger {
+    display: none; /* hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0b1a33;
+    cursor: pointer;
+    margin: 0.5rem 1rem;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 900px) {
     .hamburger {
         display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #0b1a33;
-        cursor: pointer;
-        margin: 0.5rem 1rem;
     }
-
-/* Hide nav on mobile by default */
-.journal-nav {
-    display: none;
 }
 
 /* Show nav when toggled */
