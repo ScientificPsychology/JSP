@@ -352,9 +352,19 @@ html, body {
         grid-template-columns: 1fr;
     }
 
-    .about-left {
-        margin-bottom: 1.5rem;
+@media (max-width: 900px) {
+
+    .about-right {
+        grid-column: 1 !important;
+        grid-row: auto !important;
     }
+
+    .about-left {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
+
 
     .archive-container {
         flex-direction: column;
