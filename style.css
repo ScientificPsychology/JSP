@@ -78,8 +78,8 @@ html, body {
 
 /* Hamburger: hidden by default (desktop) */
 .hamburger {
-    display: #0b1a33;
-    background: none;
+    display: none;
+    background: #0b1a33;
     border: none;
     font-size: 2rem;
     color: #ffffff;   /* ← MATCHES DESKTOP NAV TEXT */
