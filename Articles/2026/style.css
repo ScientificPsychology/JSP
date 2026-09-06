@@ -7,6 +7,10 @@ html, body {
     overflow-x: hidden;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 /* ----------------------------------------------------
    HEADER & NAVIGATION
 ---------------------------------------------------- */
@@ -350,23 +354,22 @@ html, body {
         height: 60px;
     }
 
-    /* Show hamburger button on mobile */
     .hamburger {
         display: block;
         background: none;
         border: none;
         cursor: pointer;
         padding: 0.5rem;
-        margin-left: auto; /* pushes it to the right */
+        margin-left: auto;
     }
 
-    /* Three-line hamburger icon */
+    /* Three-line hamburger icon (already correct) */
     .hamburger-icon {
         display: block;
         position: relative;
         width: 28px;
         height: 3px;
-        background: #ffffff;      /* white lines */
+        background: #ffffff;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
@@ -377,7 +380,7 @@ html, body {
         position: absolute;
         width: 28px;
         height: 3px;
-        background: #ffffff;      /* white lines */
+        background: #ffffff;
         border-radius: 2px;
         left: 0;
         transition: all 0.3s ease;
@@ -386,24 +389,27 @@ html, body {
     .hamburger-icon::before { top: -8px; }
     .hamburger-icon::after { top: 8px; }
 
-    /* Hide nav by default on mobile */
+    /* Mobile nav layout */
     .journal-nav {
-        display: none;
         flex-direction: column;
         gap: 1rem;
         background: #0b1a33;
         padding: 1rem;
     }
 
-    /* Show nav when toggled */
-    .journal-nav.mobile-open {
-        display: flex;
-    }
-
+    /* Hide links by default on mobile */
     .journal-nav a {
+        display: none;
         font-size: 0.95rem;
         padding: 0.3rem 0.6rem;
     }
+
+    /* Show links when checkbox is checked */
+    #menu-toggle:checked ~ a {
+        display: block;
+    }
+
+    /* (keep your other mobile rules: about-layout, archive, etc.) */
 
     .about-layout {
         grid-template-columns: 1fr;
