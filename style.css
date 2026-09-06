@@ -434,9 +434,28 @@ html, body {
         height: 80px;
     }
 
-   {
+    /* Allow PDF link to wrap */
     .pdf-link {
         flex-wrap: wrap;
+        overflow-x: hidden;
     }
+
+    /* Constrain PDF icon */
+    .pdf-icon {
+        max-width: 20px;
+        height: auto;
+    }
+
+    /* Remove desktop max-width */
+    .article-list {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Prevent card overflow */
+    .article-item {
+        overflow-x: hidden;
+    }
+}
 }
 
