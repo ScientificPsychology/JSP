@@ -350,10 +350,43 @@ html, body {
         height: 60px;
     }
 
+    /* Show hamburger button on mobile */
     .hamburger {
         display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-left: auto; /* pushes it to the right */
     }
 
+    /* Three-line hamburger icon */
+    .hamburger-icon {
+        display: block;
+        position: relative;
+        width: 28px;
+        height: 3px;
+        background: #ffffff;      /* white lines */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 3px;
+        background: #ffffff;      /* white lines */
+        border-radius: 2px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-icon::before { top: -8px; }
+    .hamburger-icon::after { top: 8px; }
+
+    /* Hide nav by default on mobile */
     .journal-nav {
         display: none;
         flex-direction: column;
@@ -362,6 +395,7 @@ html, body {
         padding: 1rem;
     }
 
+    /* Show nav when toggled */
     .journal-nav.mobile-open {
         display: flex;
     }
@@ -400,5 +434,6 @@ html, body {
         height: 80px;
     }
 }
+
 
 
