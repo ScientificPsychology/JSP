@@ -420,11 +420,20 @@ html, body {
         margin: 0.5rem 1rem;
     }
 
-    /* When active, show the nav */
-    .journal-nav.mobile-open {
-        display: flex;
-    }
+/* Hide nav on mobile by default */
+.journal-nav {
+    display: none;
 }
+
+/* Show nav when toggled */
+.journal-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #0b1a33;
+    padding: 1rem;
+}
+
 
 
 
