@@ -76,6 +76,18 @@ html, body {
     border-bottom-color: #0b1a33;
 }
 
+/* Hamburger: hidden by default (desktop) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0b1a33;
+    cursor: pointer;
+    margin: 0.5rem 1rem;
+}
+
+
 /* ----------------------------------------------------
    MAIN CONTENT WRAPPER
 ---------------------------------------------------- */
@@ -318,6 +330,9 @@ html, body {
 /* ----------------------------------------------------
    MOBILE RESPONSIVE FIXES
 ---------------------------------------------------- */
+/* ----------------------------------------------------
+   MOBILE RESPONSIVE FIXES
+---------------------------------------------------- */
 @media (max-width: 900px) {
 
     .journal-main,
@@ -337,10 +352,22 @@ html, body {
         height: 60px;
     }
 
+    /* Show hamburger, hide nav by default */
+    .hamburger {
+        display: block;
+    }
+
     .journal-nav {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        padding: 0.5rem;
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: #0b1a33;
+        padding: 1rem;
+    }
+
+    /* When toggled, show nav */
+    .journal-nav.mobile-open {
+        display: flex;
     }
 
     .journal-nav a {
@@ -352,19 +379,15 @@ html, body {
         grid-template-columns: 1fr;
     }
 
-@media (max-width: 900px) {
-
+    .about-left,
     .about-right {
         grid-column: 1 !important;
         grid-row: auto !important;
     }
 
     .about-left {
-        grid-column: 1 !important;
-        grid-row: auto !important;
+        margin-bottom: 1.5rem;
     }
-}
-
 
     .archive-container {
         flex-direction: column;
@@ -380,62 +403,5 @@ html, body {
     .archive-logo {
         height: 80px;
     }
-
-   @media (max-width: 900px) {
-
-    /* Generic flex column stacking */
-    .flex-columns {
-        flex-direction: column !important;
-        gap: 1.5rem;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Generic grid column stacking */
-    .grid-columns {
-        grid-template-columns: 1fr !important;
-    }
 }
-}
-
-@media (max-width: 900px) {
-
-    /* Hide the full nav on mobile */
-    .journal-nav {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        background: #0b1a33;
-        padding: 1rem;
-    }
-
-    /* Show the hamburger button */
-.hamburger {
-    display: none; /* hidden on desktop */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #0b1a33;
-    cursor: pointer;
-    margin: 0.5rem 1rem;
-}
-
-/* Show hamburger on mobile */
-@media (max-width: 900px) {
-    .hamburger {
-        display: block;
-    }
-}
-
-/* Show nav when toggled */
-.journal-nav.mobile-open {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: #0b1a33;
-    padding: 1rem;
-}
-
-
-
 
