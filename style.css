@@ -109,6 +109,7 @@ img {
     padding: 1rem 1.5rem;
     font-size: 0.95rem;
     line-height: 1.5;
+    grid-column: 1;   /* ← THIS FIXES YOUR HOMEPAGE */
 }
 
 .about-left h3 {
