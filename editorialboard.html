@@ -20,6 +20,10 @@
         </div>
     </div>
 
+  <button class="hamburger" aria-label="Toggle navigation">
+    ☰
+</button>
+
     <nav class="journal-nav">
         <a href="index.html" class="active">Home</a>
         <a href="Articles/2026/2026.html" class="active">Current Volume</a>
@@ -134,5 +138,12 @@
     </div>
 </footer>
 
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.journal-nav').classList.toggle('mobile-open');
+});
+</script>
+  
 </body>
 </html>
