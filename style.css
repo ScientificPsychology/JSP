@@ -352,7 +352,6 @@ html, body {
         height: 60px;
     }
 
-    /* Show hamburger, hide nav by default */
     .hamburger {
         display: block;
     }
@@ -365,7 +364,6 @@ html, body {
         padding: 1rem;
     }
 
-    /* When toggled, show nav */
     .journal-nav.mobile-open {
         display: flex;
     }
