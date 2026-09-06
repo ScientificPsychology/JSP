@@ -1,39 +1,37 @@
 /* ----------------------------------------------------
-   JOURNAL HEADER WITH NAVY BANNER
+   GLOBAL RESET & BASE
 ---------------------------------------------------- */
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* ----------------------------------------------------
+   HEADER & NAVIGATION
+---------------------------------------------------- */
 .journal-header {
-    margin: 0;
-    padding: 0;
     width: 100%;
+    background: #0b1a33;
     border-bottom: 1px solid #d0d0d0;
-    background: #ffffff;
 }
 
-/* Full-width navy masthead */
 .journal-banner {
-    background: #bed5ed; 
+    background: #bed5ed;
     color: #2b3a42;
     padding: 1.75rem 1rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
     justify-content: center;
-    width: 100%;
 }
 
-/* Logo styling */
 .journal-logo {
     height: 80px;
     width: auto;
     object-fit: contain;
 }
 
-/* Title + subtitle block */
 .journal-banner-text {
     display: flex;
     flex-direction: column;
@@ -41,8 +39,8 @@ html, body {
 
 .journal-title {
     margin: 0;
-    font-family: "Lora", serif;
-    font-size: 2rem;
+    font-family: "Lora", serif; /* original */
+    font-size: 2rem;            /* original */
     font-weight: 700;
     color: #2b3a42;
 }
@@ -53,49 +51,69 @@ html, body {
     color: #2b3a42;
 }
 
-/* Navigation */
 .journal-nav {
-    background: #0b1a33; /* same navy as banner */
+    background: #0b1a33;
     padding: 0.75rem 1rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 .journal-nav a {
     text-decoration: none;
-    color: #ffffff; /* white on navy looks authoritative */
-    font-size: 1.05rem; /* larger text */
-    font-weight: 600;   /* stronger presence */
-    letter-spacing: 0.5px; /* subtle spacing for a journal feel */
+    color: #ffffff;
+    font-size: 1.05rem;         /* original */
+    font-weight: 600;           /* original */
+    letter-spacing: 0.5px;      /* original */
     padding: 0.4rem 0.8rem;
     border-bottom: 2px solid transparent;
     transition: 0.2s ease;
 }
 
-.journal-nav a:hover {
-    border-bottom-color: #0b1a33;
-}
-
+.journal-nav a:hover,
 .journal-nav .active {
     border-bottom-color: #0b1a33;
 }
 
+/* Hamburger: hidden by default (desktop) */
+.hamburger {
+    display: none;
+    background: #0b1a33;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;   /* ← MATCHES DESKTOP NAV TEXT */
+    cursor: pointer;
+    margin: 0.5rem 1rem;
+    margin-left: auto;
+}
+
+
+/* ----------------------------------------------------
+   MAIN CONTENT WRAPPER
+---------------------------------------------------- */
 .journal-main {
-    max-width: 1000px;   /* narrower, more journal-like */
+    max-width: 1000px;
     margin: 2.5rem auto;
     padding: 0 1rem;
 }
 
-.journal-footer {
-    text-align: center;      /* centers the text */
-    margin: 0 auto;          /* centers the block itself */
-    padding: 1.5rem 1rem;
-    font-size: 0.85rem;
-    color: #666;
-    border-top: 1px solid var(--border);
-    background: #f9f9f9;
+.journal-main.archive-page {
+    max-width: 1400px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+/* ----------------------------------------------------
+   ABOUT PAGE LAYOUT
+---------------------------------------------------- */
+.about-layout {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    align-items: start;
 }
 
 .about-section {
@@ -115,51 +133,42 @@ html, body {
     text-align: justify; /* journal-style paragraph alignment */
 }
 
-/* Two-column About layout */
-.about-layout {
-    max-width: 1000px;   /* wider than the main content column */
-    margin: 0 auto 3rem; /* centered, with spacing below */
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 2.5rem;
-    align-items: start;
-}
-
-/* Left column (sidebar-style) */
 .about-left {
     background: #f4f6fa;
-    border-left: 4px solid #0b1a33; /* navy accent */
+    border-left: 4px solid #0b1a33;
     padding: 1rem 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    grid-column: 1;   /* forces all .about-left items into column 1 */
+    font-size: 0.95rem;         /* original */
+    line-height: 1.5;           /* original */
+    grid-column: 1;             /* original */
 }
 
 .about-left h3 {
     margin-top: 0;
-    font-family: "Lora", serif;
-    font-size: 1.1rem;
+    font-family: "Lora", serif; /* original */
+    font-size: 1.1rem;          /* original */
     color: #0b1a33;
 }
 
-/* Right column (main content) */
 .about-right {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    grid-column: 2;
-    grid-row: 1 / span 4;
+    font-size: 1.05rem;         /* original */
+    line-height: 1.5;           /* original */
+    grid-column: 2;             /* original */
+    grid-row: 1 / span 4;       /* original */
 }
 
 .about-right h2 {
-    font-size: 1.55rem;
+    font-size: 1.55rem;         /* original */
     margin-bottom: 1rem;
 }
 
 .about-right p {
-    font-size: 1.08rem;
-    line-height: 1.25;
+    font-size: 1.08rem;         /* original */
+    line-height: 1.25;          /* original */
 }
 
+/* ----------------------------------------------------
+   ARTICLE CARDS
+---------------------------------------------------- */
 .recent-articles {
     max-width: 800px;   /* or 650px for a very narrow journal column */
     margin: 0 auto 3rem;
@@ -170,35 +179,21 @@ html, body {
     width: auto;
 }
 
-
-
-/* Responsive layout */
-@media (max-width: 900px) {
-    .about-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .about-left {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* --- Article Cards --- */
 .article-section {
     width: 100%;
-    background: #e6eef5; /* silver-blue */
+    background: #e6eef5;
     padding: 2.5rem 1rem;
     border-top: 3px solid #0b1a33;
 }
 
 .article-section h2 {
     text-align: center;
-    font-family: "Lora", serif;     /* matches your other h2 */
-    font-size: 1.55rem;             /* same size as About the Journal h2 */
+    font-family: "Lora", serif; /* original */
+    font-size: 1.55rem;         /* original */
     font-weight: 600;
-    color: #0b1a33;                 /* your navy accent */
-    margin-bottom: 1.5rem;          /* consistent spacing */
-    letter-spacing: 0.3px;          /* subtle journal-style refinement */
+    color: #0b1a33;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.3px;
 }
 
 .article-list {
@@ -227,7 +222,7 @@ html, body {
 }
 
 .article-type {
-    font-size: 0.85rem;
+    font-size: 0.85rem;         /* original */
     font-weight: 600;
     color: #0b1a33;
     margin-bottom: 0.4rem;
@@ -235,9 +230,33 @@ html, body {
 
 .article-authors,
 .article-meta {
-    font-size: 0.9rem;
+    font-size: 0.9rem;          /* original */
     color: #555;
     margin: 0.2rem 0;
+}
+
+/* ----------------------------------------------------
+   ARCHIVE PAGE LAYOUT
+---------------------------------------------------- */
+.archive-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    gap: 3rem;
+}
+
+.archive-sidebar {
+    width: 260px;
+    background: #f4f6f9;
+    border-right: 2px solid #d0d7e2;
+    padding: 0.8rem;
+    border-radius: 6px;
+}
+
+.archive-content {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .pdf-link {
@@ -267,38 +286,17 @@ html, body {
     flex: 1;
 }
 
-.archive-container {
-  display: flex;
- max-width: 1400px !important;
-  margin: 2rem auto;
-  gap: 3rem;
-  align-items: flex-start;
+/* ----------------------------------------------------
+   EDITORIAL PAGE
+---------------------------------------------------- */
+.editorial-board p {
+    line-height: 0.75;          /* original */
+    margin-bottom: 0.4rem;
 }
 
-.archive-sidebar {
-  width: 260px;
-  background: #f4f6f9;
-  border-right: 2px solid #d0d7e2;
-  padding: 0.8rem;
-  border-radius: 6px;
-  margin-left: 0;
-}
-
-.archive-content {
-  flex: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Override journal-main for archive layout */
-.journal-main.archive-page {
-    max-width: 1400px !important;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-}
-
-
-/* --- New Footer --- */
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
 .journal-footer {
     background: #0b1a33;
     color: #ffffff;
@@ -309,13 +307,12 @@ html, body {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 120px 1fr; /* logo column + centered links */
+    grid-template-columns: 120px 1fr;
     align-items: center;
 }
 
 .footer-logo {
     height: 70px;
-    width: auto;
 }
 
 .footer-links {
@@ -323,7 +320,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    font-size: 0.95rem;
+    font-size: 0.95rem;         /* original */
 }
 
 .footer-links a {
@@ -331,23 +328,11 @@ html, body {
     text-decoration: none;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* --- Editorial Page ---*/
-.editorial-board p {
-    line-height: 0.75;
-    margin-bottom: 0.4rem;
-}
-
 /* ----------------------------------------------------
    MOBILE RESPONSIVE FIXES
 ---------------------------------------------------- */
-
 @media (max-width: 900px) {
 
-    /* Make main containers fluid */
     .journal-main,
     .about-layout,
     .archive-container {
@@ -356,32 +341,63 @@ html, body {
         padding: 0 1rem;
     }
 
-    /* Stack flex layouts vertically */
-    .editorial-board div[style*="display:flex"],
-    .archive-container {
+    .journal-banner {
         flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    /* Make images scale instead of overflow */
-    img {
-        max-width: 100%;
-        height: auto;
+        text-align: center;
     }
 
     .journal-logo {
         height: 60px;
     }
 
-    .archive-logo {
-        height: 80px;
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-left: auto; /* pushes it to the right */
     }
 
-    /* Navigation spacing */
+    /* Three-line hamburger icon */
+    .hamburger-icon {
+        display: block;
+        position: relative;
+        width: 28px;
+        height: 3px;
+        background: #ffffff;      /* white lines */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 3px;
+        background: #ffffff;      /* white lines */
+        border-radius: 2px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-icon::before { top: -8px; }
+    .hamburger-icon::after { top: 8px; }
+
+    /* Hide nav by default on mobile */
     .journal-nav {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        padding: 0.5rem;
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: #0b1a33;
+        padding: 1rem;
+    }
+
+    /* Show nav when toggled */
+    .journal-nav.mobile-open {
+        display: flex;
     }
 
     .journal-nav a {
@@ -389,10 +405,23 @@ html, body {
         padding: 0.3rem 0.6rem;
     }
 
-    /* Article cards */
-    .article-list {
-        max-width: 100%;
-        padding: 0 0.5rem;
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left,
+    .about-right {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+    .about-left {
+        margin-bottom: 1.5rem;
+    }
+
+    .archive-container {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .article-card-row {
@@ -400,5 +429,51 @@ html, body {
         align-items: center;
         text-align: center;
     }
+
+    .archive-logo {
+        height: 80px;
+    }
 }
 
+@media (max-width: 900px) {
+
+    /* Hard clamp the recent publication section to the viewport */
+    .article-section {
+        width: 100%;
+        max-width: 100vw;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .article-list {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .article-item {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* PDF link + icon: prevent them from pushing the card wider */
+    .pdf-link {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .pdf-icon {
+        max-width: 20px;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
