@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Archive – Journal of Scientific Psychology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* --- Layout --- */
+.archive-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+/* --- Sidebar --- */
+.archive-sidebar {
+  width: 260px;
+  background: #f4f6f9;
+  border-right: 2px solid #d0d7e2;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.sidebar-section {
+  margin-bottom: 1rem;
+}
+
+.sidebar-decade {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #0b1a33;
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar-decade:hover {
+  background: #14294d;
+}
+
+.sidebar-years {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-years button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #e3e8ef;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.3rem;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar-years button:hover {
+  background: #cdd6e3;
+}
+
+.sidebar-years button.active {
+  background: #0b1a33;
+  color: #fff;
+}
+
+/* --- Article Content --- */
+.archive-content {
+  flex: 1;
+}
+
+.year-header {
+  font-family: "Lora", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #0b1a33;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.article-item {
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.article-card-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.archive-logo {
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.article-card-text h3 a {
+  color: #0b1a33;
+  text-decoration: none;
+}
+
+.article-card-text h3 a:hover {
+  text-decoration: underline;
+}
+
+.pdf-icon {
+  height: 20px;
+  margin-right: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="journal-header">
+    <div class="journal-banner">
+        <img src="JSPLogo.png" alt="Journal Logo" class="journal-logo">
+        <div class="journal-banner-text">
+            <h1 class="journal-title">Journal of Scientific Psychology</h1>
+            <p class="journal-subtitle">Established 2006</p>
+        </div>
+    </div>
+
+    <nav class="journal-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="Articles/2026/2026.html" class="active">Current Volume</a>
+        <a href="Archive.html">Past Volumes</a>
+        <a href="InfoForAuthors.html">Submit</a>
+        <a href="editorialboard.html">Editorial Board</a>
+    </nav>
+</header>
+
+<main class="journal-main archive-page">
+
+<h2 style="text-align:center;">Archive of Published Articles</h2>
+<p style="text-align:center; color:#555;">Browse all articles published in the Journal of Scientific Psychology.</p>
+
+<div class="archive-container">
+
+  <!-- SIDEBAR -->
+  <aside class="archive-sidebar">
+
+    <!-- 2020s -->
+    <div class="sidebar-section">
+      <div class="sidebar-decade">2020s</div>
+      <div class="sidebar-years">
+        <button data-year="2026">2026</button>
+        <button data-year="2025">2025</button>
+        <button data-year="2024">2024</button>
+        <button data-year="2023">2023</button>
+        <button data-year="2022">2022</button>
+        <button data-year="2021">2021</button>
+        <button data-year="2020">2020</button>
+      </div>
+    </div>
+
+    <!-- 2010s -->
+    <div class="sidebar-section">
+      <div class="sidebar-decade">2010s</div>
+      <div class="sidebar-years">
+        <button data-year="2019">2019</button>
+        <button data-year="2018">2018</button>
+        <button data-year="2017">2017</button>
+        <button data-year="2016">2016</button>
+        <button data-year="2015">2015</button>
+        <button data-year="2014">2014</button>
+        <button data-year="2013">2013</button>
+        <button data-year="2012">2012</button>
+        <button data-year="2011">2011</button>
+        <button data-year="2010">2010</button>
+      </div>
+    </div>
+
+    <!-- 2000s -->
+    <div class="sidebar-section">
+      <div class="sidebar-decade">2000s</div>
+      <div class="sidebar-years">
+        <button data-year="2009">2009</button>
+        <button data-year="2008">2008</button>
+        <button data-year="2007">2007</button>
+        <button data-year="2006">2006</button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- CONTENT -->
+  <section class="archive-content" id="archiveContent">
+    <h3 class="year-header">Select a year</h3>
+    <p style="color:#555;">Choose a year from the left menu to view articles.</p>
+  </section>
+
+</div>
+
+</main>
+
+<script>
+// COLLAPSIBLE DECADES
+document.querySelectorAll('.sidebar-decade').forEach(decade => {
+  decade.addEventListener('click', () => {
+    const years = decade.nextElementSibling;
+    years.style.display = years.style.display === "block" ? "none" : "block";
+  });
+});
+
+// YEAR CLICK HANDLER
+const content = document.getElementById('archiveContent');
+
+document.querySelectorAll('.sidebar-years button').forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    document.querySelectorAll('.sidebar-years button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const year = btn.dataset.year;
+
+    // LOAD YEAR CONTENT
+    content.innerHTML = generateYear(year);
+  });
+});
+
+// YEAR CONTENT GENERATOR
+function generateYear(year) {
+
+  // --- 2026 ---
+  if (year === "2026") return `
+    <h3 class="year-header">2026</h3>
+    <div class="article-list">
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2026/ArtSum_MS136.html">The Effect of a Blue Mind Intervention on College Student Well‑Being</a></h3>
+            <p class="article-authors">Shannon, E., & Goodman‑Riley, L.</p>
+            <p class="article-meta">Vol. 21 (2026), Pgs. 1–16</p>
+            <a href="Articles/2026/MS_136.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+  // --- 2025 ---
+  if (year === "2025") return `
+    <h3 class="year-header">2025</h3>
+    <div class="article-list">
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2025/ArtSum_MS134.html">Recalling (Some) U.S. Vice Presidents</a></h3>
+            <p class="article-authors">Ferraro, F. R.</p>
+            <p class="article-meta">Vol. 20 (2025), Pgs. 1–6</p>
+            <a href="Articles/2025/MS_134.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2025/ArtSum_MS135.html">Empathy Unveiled: Exploring the Mediating Role of Empathy in the Sad Eyewitness Effect</a></h3>
+            <p class="article-authors">Ridley, C. A., Maass, J. K., & Randell, J. A.</p>
+            <p class="article-meta">Vol. 20 (2025), Pgs. 7–20</p>
+            <a href="Articles/2025/MS_135.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2025/ArtSum_MS128.html">Encouraging Employers to Promote Safe-Sun Behaviors among Outdoor Workers</a></h3>
+            <p class="article-authors">Entringer, A., Brannon, L., & Whitaker, W.</p>
+            <p class="article-meta">Vol. 20 (2025), Pgs. 21-32</p>
+            <a href="Articles/2025/MS_128.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2025/ArtSum_MS132.html">Using the Immediate Feedback Assessment Technique (IFAT) for Test Reviews: Effects on Academic Performance</a></h3>
+            <p class="article-authors">Kennette, L. N., Lin, P. S., & Van Havermaet, L. R.</p>
+            <p class="article-meta">Vol. 20 (2025), Pgs. 33-41</p>
+            <a href="Articles/2025/MS132.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-item">
+        <div class="article-card-row">
+          <img src="JSPCover.png" class="archive-logo">
+          <div class="article-card-text">
+            <p class="article-type">Research Article</p>
+            <h3><a href="Articles/2025/ArtSum_MS133.html">Eliminating the Potential Roots of Fear: Addressing Thanatophobia in Childhood</a></h3>
+            <p class="article-authors">Gray, T, & Maass, J.</p>
+            <p class="article-meta">Vol. 20 (2025), Pgs. 42-51</p>
+            <a href="Articles/2025/MS133.pdf" class="pdf-link" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon"> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+  // DEFAULT FOR YEARS WITH NO ARTICLES
+  return `
+    <h3 class="year-header">${year}</h3>
+    <p>Archive in the process of being updated. Additional archives can be found <a href="https://psyencelab.com/archive.html" target="_blank">HERE</a></p>
+  `;
+}
+</script>
+
+</body>
+</html>
