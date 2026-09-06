@@ -285,13 +285,9 @@ html, body {
    FOOTER
 ---------------------------------------------------- */
 .journal-footer {
-    text-align: center;      /* centers the text */
-    margin: 0 auto;          /* centers the block itself */
-    padding: 1.5rem 1rem;
-    font-size: 0.85rem;
-    color: #666;
-    border-top: 1px solid var(--border);
-    background: #f9f9f9;
+    background: #0b1a33;
+    color: #ffffff;
+    padding: 2rem 1rem;
 }
 
 .footer-inner {
