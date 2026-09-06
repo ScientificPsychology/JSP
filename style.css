@@ -78,7 +78,7 @@ html, body {
 
 /* Hamburger: hidden by default (desktop) */
 .hamburger {
-    display: none;
+    display: #0b1a33;
     background: none;
     border: none;
     font-size: 2rem;
