@@ -248,7 +248,7 @@ img {
 }
 
 /* ----------------------------------------------------
-   MOBILE RESPONSIVE (TRUE MOBILE-FIRST)
+   MOBILE RESPONSIVE (SAFE VERSION)
 ---------------------------------------------------- */
 @media (max-width: 900px) {
 
@@ -305,7 +305,7 @@ img {
         height: 80px;
     }
 
-    /* Editorial page */
+    /* Editorial page ONLY */
     .editorial-board div[style*="display:flex"],
     .editorial-board .flex {
         flex-direction: column !important;
