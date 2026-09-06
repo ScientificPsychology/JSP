@@ -398,4 +398,33 @@ html, body {
 }
 }
 
+@media (max-width: 900px) {
+
+    /* Hide the full nav on mobile */
+    .journal-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: #0b1a33;
+        padding: 1rem;
+    }
+
+    /* Show the hamburger button */
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #0b1a33;
+        cursor: pointer;
+        margin: 0.5rem 1rem;
+    }
+
+    /* When active, show the nav */
+    .journal-nav.mobile-open {
+        display: flex;
+    }
+}
+
+
 
