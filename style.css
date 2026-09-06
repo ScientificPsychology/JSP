@@ -433,7 +433,10 @@ html, body {
     .archive-logo {
         height: 80px;
     }
+
+   {
+    .pdf-link {
+        flex-wrap: wrap;
+    }
 }
-
-
 
