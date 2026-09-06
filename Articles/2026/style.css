@@ -1,0 +1,337 @@
+/* ----------------------------------------------------
+   JOURNAL HEADER WITH NAVY BANNER
+---------------------------------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.journal-header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #d0d0d0;
+    background: #ffffff;
+}
+
+/* Full-width navy masthead */
+.journal-banner {
+    background: #bed5ed; 
+    color: #2b3a42;
+    padding: 1.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Logo styling */
+.journal-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Title + subtitle block */
+.journal-banner-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-title {
+    margin: 0;
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2b3a42;
+}
+
+.journal-subtitle {
+    margin: 0.3rem 0 0;
+    font-size: 1rem;
+    color: #2b3a42;
+}
+
+/* Navigation */
+.journal-nav {
+    background: #0b1a33; /* same navy as banner */
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.journal-nav a {
+    text-decoration: none;
+    color: #ffffff; /* white on navy looks authoritative */
+    font-size: 1.05rem; /* larger text */
+    font-weight: 600;   /* stronger presence */
+    letter-spacing: 0.5px; /* subtle spacing for a journal feel */
+    padding: 0.4rem 0.8rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.journal-nav a:hover {
+    border-bottom-color: #0b1a33;
+}
+
+.journal-nav .active {
+    border-bottom-color: #0b1a33;
+}
+
+.journal-main {
+    max-width: 1000px;   /* narrower, more journal-like */
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.journal-footer {
+    text-align: center;      /* centers the text */
+    margin: 0 auto;          /* centers the block itself */
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid var(--border);
+    background: #f9f9f9;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+}
+
+.about-section h2 {
+    font-size: 1.45rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-section p {
+    margin-bottom: 1.4rem;
+    text-align: justify; /* journal-style paragraph alignment */
+}
+
+/* Two-column About layout */
+.about-layout {
+    max-width: 1000px;   /* wider than the main content column */
+    margin: 0 auto 3rem; /* centered, with spacing below */
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Left column (sidebar-style) */
+.about-left {
+    background: #f4f6fa;
+    border-left: 4px solid #0b1a33; /* navy accent */
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    grid-column: 1;   /* forces all .about-left items into column 1 */
+}
+
+.about-left h3 {
+    margin-top: 0;
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    color: #0b1a33;
+}
+
+/* Right column (main content) */
+.about-right {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    grid-column: 2;
+    grid-row: 1 / span 4;
+}
+
+.about-right h2 {
+    font-size: 1.55rem;
+    margin-bottom: 1rem;
+}
+
+.about-right p {
+    font-size: 1.08rem;
+    line-height: 1.25;
+}
+
+.recent-articles {
+    max-width: 800px;   /* or 650px for a very narrow journal column */
+    margin: 0 auto 3rem;
+}
+
+.pdf-icon {
+    height: 18px;   /* or 16px, 20px, etc. */
+    width: auto;
+}
+
+
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* --- Article Cards --- */
+.article-section {
+    width: 100%;
+    background: #e6eef5; /* silver-blue */
+    padding: 2.5rem 1rem;
+    border-top: 3px solid #0b1a33;
+}
+
+.article-section h2 {
+    text-align: center;
+    font-family: "Lora", serif;     /* matches your other h2 */
+    font-size: 1.55rem;             /* same size as About the Journal h2 */
+    font-weight: 600;
+    color: #0b1a33;                 /* your navy accent */
+    margin-bottom: 1.5rem;          /* consistent spacing */
+    letter-spacing: 0.3px;          /* subtle journal-style refinement */
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.article-item {
+    background: #ffffff;
+    border: 1px solid #c8d3df;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.article-item h3 a {
+    text-decoration: none;
+    color: #0b1a33;
+}
+
+.article-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.article-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0b1a33;
+    margin-bottom: 0.4rem;
+}
+
+.article-authors,
+.article-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.2rem 0;
+}
+
+.pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    font-weight: 600;
+    color: #0b1a33;
+}
+
+.article-card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.archive-logo {
+    height: 100px;   /* larger desktop size */
+    width: auto;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+}
+
+
+.article-card-text {
+    flex: 1;
+}
+
+.archive-container {
+  display: flex;
+ max-width: 1400px !important;
+  margin: 2rem auto;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.archive-sidebar {
+  width: 260px;
+  background: #f4f6f9;
+  border-right: 2px solid #d0d7e2;
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin-left: 0;
+}
+
+.archive-content {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Override journal-main for archive layout */
+.journal-main.archive-page {
+    max-width: 1400px !important;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+
+/* --- New Footer --- */
+.journal-footer {
+    background: #0b1a33;
+    color: #ffffff;
+    padding: 2rem 1rem;
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 120px 1fr; /* logo column + centered links */
+    align-items: center;
+}
+
+.footer-logo {
+    height: 70px;
+    width: auto;
+}
+
+.footer-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
