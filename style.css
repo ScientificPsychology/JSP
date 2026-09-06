@@ -483,3 +483,11 @@ html, body {
         flex-shrink: 0;
     }
 }
+
+@media (max-width: 900px) {
+    .editorial-board p {
+        line-height: 1;
+        margin-bottom: 0.8rem;
+    }
+}
+
