@@ -294,7 +294,7 @@ html, body {
    EDITORIAL PAGE
 ---------------------------------------------------- */
 .editorial-board p {
-    line-height: 0.75;          /* original */
+    line-height: 1;          /* original */
     margin-bottom: 0.4rem;
 }
 
