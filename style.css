@@ -341,3 +341,64 @@ html, body {
     margin-bottom: 0.4rem;
 }
 
+/* ----------------------------------------------------
+   MOBILE RESPONSIVE FIXES
+---------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    /* Make main containers fluid */
+    .journal-main,
+    .about-layout,
+    .archive-container {
+        max-width: 100%;
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    /* Stack flex layouts vertically */
+    .editorial-board div[style*="display:flex"],
+    .archive-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Make images scale instead of overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .journal-logo {
+        height: 60px;
+    }
+
+    .archive-logo {
+        height: 80px;
+    }
+
+    /* Navigation spacing */
+    .journal-nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .journal-nav a {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* Article cards */
+    .article-list {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .article-card-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
