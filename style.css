@@ -374,4 +374,22 @@ html, body {
     .archive-logo {
         height: 80px;
     }
+
+   @media (max-width: 900px) {
+
+    /* Generic flex column stacking */
+    .flex-columns {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Generic grid column stacking */
+    .grid-columns {
+        grid-template-columns: 1fr !important;
+    }
 }
+}
+
+
