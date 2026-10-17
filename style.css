@@ -148,6 +148,7 @@ html, body {
     display: flex;
     justify-content: flex-start;  /* image aligned to top */
     align-items: stretch;
+    align-self: stretch;
 }
 
 .jsp-editorial-image {
