@@ -120,7 +120,7 @@ html, body {
     grid-template-columns: 280px 280px 1fr; /* two cards + image */
     gap: 2.5rem;
 
-    align-items: stretch; /* force all columns to equal height */
+    align-items: stretch; /* all columns match tallest column */
 }
 
 .about-section {
@@ -172,16 +172,16 @@ html, body {
     line-height: 1.25;          /* original */
 }
 
-/* Image column */
+/* Image column MUST stretch */
 .about-center {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* align image to top */
     align-items: center;
-    height: 100%; /* stretch to match card column height */
+    height: 100%; /* stretch to match stacked card height */
 }
 
-/* Editorial image */
+/* Image MUST stretch to column height */
 .jsp-editorial-image {
     height: 100%;        /* match height of tallest column */
     width: auto;         /* preserve aspect ratio */
