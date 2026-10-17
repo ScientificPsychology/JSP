@@ -115,11 +115,10 @@ html, body {
 .about-layout {
     max-width: 1000px;
     margin: 0 auto 3rem;
-
     display: grid;
     grid-template-columns: 280px 1fr;   /* left cards | right image */
     gap: 2.5rem;
-    align-items: start;                 /* align image with top of cards */
+    align-items: stretch;                 /* align image with top of cards */
 }
 
 /* NEW WRAPPER — forces both cards into column 1, same row */
@@ -151,7 +150,7 @@ html, body {
     grid-column: 2;                     /* force image into column 2 */
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     align-self: stretch;
 }
 
