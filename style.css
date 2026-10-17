@@ -120,7 +120,7 @@ html, body {
     display: grid;
     grid-template-columns: 280px 1fr; /* left cards + right image */
     gap: 2.5rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .about-left-column {
@@ -152,9 +152,8 @@ html, body {
 }
 
 .jsp-editorial-image {
-    height: 500px
-    max-height: 100%;   /* adjust this number until it visually matches the cards */
-    width: auto;
+    height: 100%;        /* fill the column height */
+    width: auto;         /* keep proportions */
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
