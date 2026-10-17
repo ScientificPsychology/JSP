@@ -150,7 +150,7 @@ html, body {
     grid-column: 2;                   
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     align-self: auto;
     max-width: 340px;
 }
