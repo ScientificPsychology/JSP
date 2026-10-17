@@ -108,99 +108,41 @@ html, body {
     padding: 0 1rem;
 }
 
-/* ----------------------------------------------------
-   ABOUT PAGE LAYOUT
----------------------------------------------------- */
-
 .about-layout {
     max-width: 1000px;
     margin: 0 auto 3rem;
 
     display: grid;
-    grid-template-columns: 280px 280px 1fr; /* two cards + image */
+    grid-template-columns: 280px 1fr; /* left column + right column */
     gap: 2.5rem;
-
-    align-items: stretch; /* all columns match tallest column */
+    align-items: start;
 }
 
-.about-section {
-    margin-bottom: 3rem;
-    font-size: 1.05rem;
-    line-height: 1.25;
-}
-
-.about-section h2 {
-    font-size: 1.45rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.about-section p {
-    margin-bottom: 1.4rem;
-    text-align: justify; /* journal-style paragraph alignment */
-}
-
-/* Left cards */
+/* Stack both cards in the LEFT column */
 .about-left {
+    grid-column: 1; /* force both cards into column 1 */
     background: #f7f7f7;
     padding: 1rem 1.25rem;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
 }
 
-.about-left h3 {
-    margin-top: 0;
-    font-family: "Lora", serif; /* original */
-    font-size: 1.1rem;          /* original */
-    color: #0b1a33;
-}
-
-.about-right {
-    font-size: 1.05rem;         /* original */
-    line-height: 1.5;           /* original */
-    grid-column: 2;             /* original */
-    grid-row: 1 / span 4;       /* original */
-}
-
-.about-right h2 {
-    font-size: 1.55rem;         /* original */
-    margin-bottom: 1rem;
-}
-
-.about-right p {
-    font-size: 1.08rem;         /* original */
-    line-height: 1.25;          /* original */
-}
-
-/* Image column MUST stretch */
+/* Image goes in the RIGHT column */
 .about-center {
+    grid-column: 2; /* force image into column 2 */
     display: flex;
-    flex-direction: column;
     justify-content: flex-start; /* align image to top */
     align-items: center;
-    height: 100%; /* stretch to match stacked card height */
 }
 
-/* Image MUST stretch to column height */
+/* Editorial image sizing */
 .jsp-editorial-image {
-    height: 100%;        /* match height of tallest column */
-    width: auto;         /* preserve aspect ratio */
-    object-fit: contain; /* no cropping */
+    max-height: 100%;     /* allow image to match card height */
+    width: 100%;          /* scale proportionally */
+    object-fit: contain;  /* no cropping */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-.about-full {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem 0 2rem;
-}
-
-.about-full h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 
 /* ----------------------------------------------------
    ARTICLE CARDS
