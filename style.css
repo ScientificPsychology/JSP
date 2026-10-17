@@ -150,13 +150,14 @@ html, body {
     grid-column: 2;                     /* force image into column 2 */
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
-    align-self: stretch;
+    align-items: flex-start;
+    align-self: auto;
 }
 
 /* IMAGE — sized reasonably, stays to the right */
 .jsp-editorial-image {
-    height: 100%;                  /* adjust to match card height */
+    height: auto;                  /* adjust to match card height */
+    max-height: 100%;
     width: auto;
     object-fit: contain;
     border-radius: 8px;
