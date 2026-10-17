@@ -116,7 +116,7 @@ html, body {
     max-width: 1000px;
     margin: 0 auto 3rem;
     display: grid;
-    grid-template-columns: 280px 1fr;   /* left cards | right image */
+    grid-template-columns: 340px 1fr;   /* left cards | right image */
     gap: 2.5rem;
     align-items: stretch;                 /* align image with top of cards */
 }
@@ -152,12 +152,12 @@ html, body {
     justify-content: flex-start;
     align-items: flex-start;
     align-self: auto;
-    max-width: 280px;
+    max-width: 340px;
 }
 
 /* IMAGE — sized reasonably, stays to the right */
 .jsp-editorial-image {
-    width: 280px;
+    width: 340px;
     height: auto;                 
     object-fit: contain;
     border-radius: 8px;
