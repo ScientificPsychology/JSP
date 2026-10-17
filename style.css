@@ -108,10 +108,8 @@ html, body {
     padding: 0 1rem;
 }
 
-
-
 /* ----------------------------------------------------
-   ABOUT SECTION — FINAL, CLEAN, STABLE VERSION
+   ABOUT SECTION — FINAL WORKING VERSION
 ---------------------------------------------------- */
 
 .about-layout {
@@ -119,11 +117,12 @@ html, body {
     margin: 0 auto 3rem;
 }
 
-/* Two-column container: left = cards, right = image */
+/* Two-column container */
 .about-inner {
     display: flex;
-    gap: 2.5rem;
+    flex-direction: row;
     align-items: stretch;   /* both columns same height */
+    gap: 2.5rem;
 }
 
 /* LEFT COLUMN — stacked cards */
