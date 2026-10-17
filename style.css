@@ -119,7 +119,8 @@ html, body {
     display: grid;
     grid-template-columns: 280px 280px 1fr; /* two cards + image */
     gap: 2.5rem;
-    align-items: stretch; /* ensures equal column height */
+
+    align-items: stretch; /* force all columns to equal height */
 }
 
 .about-section {
@@ -171,18 +172,20 @@ html, body {
     line-height: 1.25;          /* original */
 }
 
-/* Center image column */
+/* Image column */
 .about-center {
     display: flex;
-    justify-content: center;
-    align-items: stretch; /* match height of tallest column */
+    flex-direction: column;
+    justify-content: flex-start; /* align image to top */
+    align-items: center;
+    height: 100%; /* stretch to match card column height */
 }
 
-/* Editorial image sizing */
+/* Editorial image */
 .jsp-editorial-image {
-    height: 100%;          /* match stacked card height */
-    width: auto;           /* preserve aspect ratio */
-    object-fit: contain;   /* no cropping */
+    height: 100%;        /* match height of tallest column */
+    width: auto;         /* preserve aspect ratio */
+    object-fit: contain; /* no cropping */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
