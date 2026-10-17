@@ -156,9 +156,8 @@ html, body {
 
 /* IMAGE — sized reasonably, stays to the right */
 .jsp-editorial-image {
-    height: auto;                  /* adjust to match card height */
-    max-height: 380px;
-    width: auto;
+    width: 240px;
+    height: auto;                 
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
