@@ -111,19 +111,24 @@ html, body {
 
 
 /* ----------------------------------------------------
-  ABOUT SECTION CONTENT WRAPPER
+   ABOUT SECTION — FINAL, CLEAN, STABLE VERSION
 ---------------------------------------------------- */
 
 .about-layout {
     max-width: 1000px;
     margin: 0 auto 3rem;
-    display: grid;
-    grid-template-columns: 280px 1fr; /* left cards + right image */
-    gap: 2.5rem;
-    align-items: stretch;
 }
 
+/* Two-column container: left = cards, right = image */
+.about-inner {
+    display: flex;
+    gap: 2.5rem;
+    align-items: stretch;   /* both columns same height */
+}
+
+/* LEFT COLUMN — stacked cards */
 .about-left-column {
+    width: 280px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -144,23 +149,22 @@ html, body {
     color: #0b1a33;
 }
 
-.about-center {
+/* RIGHT COLUMN — cover image */
+.about-image-column {
+    flex: 1;
     display: flex;
-    justify-content: flex-start;  /* image aligned to top */
-    align-items: stretch;
-    align-self: stretch;
+    align-items: flex-start;   /* align image with top of cards */
+    justify-content: center;
 }
 
+/* COVER IMAGE — matches height of stacked cards */
 .jsp-editorial-image {
-    height: 100%;        /* fill the column height */
-    width: auto;         /* keep proportions */
-    object-fit: contain;
+    height: 100%;              /* fill column height */
+    width: auto;               /* preserve aspect ratio */
+    object-fit: contain;       /* no cropping */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-
-
 
 /* ----------------------------------------------------
    ARTICLE CARDS
