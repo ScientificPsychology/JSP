@@ -118,7 +118,7 @@ html, body {
     display: grid;
     grid-template-columns: 340px 1fr;   /* left cards | right image */
     gap: 2.5rem;
-    align-items: stretch;                 /* align image with top of cards */
+    align-items: start;                 /* align image with top of cards */
 }
 
 /* NEW WRAPPER — forces both cards into column 1, same row */
