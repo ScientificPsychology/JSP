@@ -152,7 +152,7 @@ html, body {
 }
 
 .jsp-editorial-image {
-    max-height: 420px;   /* adjust this number until it visually matches the cards */
+    max-height: 500px;   /* adjust this number until it visually matches the cards */
     width: auto;
     object-fit: contain;
     border-radius: 8px;
