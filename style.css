@@ -147,11 +147,12 @@ html, body {
 
 /* RIGHT COLUMN — journal cover image */
 .about-right {
-    grid-column: 2;                     /* force image into column 2 */
+    grid-column: 2;                   
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     align-self: auto;
+    max-width: 240px;
 }
 
 /* IMAGE — sized reasonably, stays to the right */
