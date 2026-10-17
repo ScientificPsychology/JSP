@@ -152,12 +152,12 @@ html, body {
     justify-content: flex-start;
     align-items: flex-start;
     align-self: auto;
-    max-width: 240px;
+    max-width: 280px;
 }
 
 /* IMAGE — sized reasonably, stays to the right */
 .jsp-editorial-image {
-    width: 240px;
+    width: 280px;
     height: auto;                 
     object-fit: contain;
     border-radius: 8px;
