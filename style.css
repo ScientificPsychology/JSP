@@ -109,31 +109,22 @@ html, body {
 }
 
 /* ----------------------------------------------------
-   ABOUT SECTION — FINAL WORKING VERSION
+   ABOUT SECTION — CLEAN TWO-COLUMN LAYOUT
 ---------------------------------------------------- */
 
 .about-layout {
     max-width: 1000px;
     margin: 0 auto 3rem;
-}
 
-/* Two-column container */
-.about-inner {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;   /* both columns same height */
+    display: grid;
+    grid-template-columns: 280px 1fr;   /* left cards | right image */
     gap: 2.5rem;
+    align-items: start;                 /* align image with top of cards */
 }
 
-/* LEFT COLUMN — stacked cards */
-.about-left-column {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
+/* LEFT COLUMN — stack both cards */
 .about-left {
+    grid-column: 1;                     /* force both cards into column 1 */
     background: #f4f6fa;
     border-left: 4px solid #0b1a33;
     padding: 1rem 1.5rem;
@@ -148,19 +139,19 @@ html, body {
     color: #0b1a33;
 }
 
-/* RIGHT COLUMN — cover image */
-.about-image-column {
-    flex: 1;
+/* RIGHT COLUMN — journal cover image */
+.about-right {
+    grid-column: 2;                     /* force image into column 2 */
     display: flex;
-    align-items: flex-start;   /* align image with top of cards */
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-/* COVER IMAGE — matches height of stacked cards */
+/* IMAGE — sized reasonably, stays to the right */
 .jsp-editorial-image {
-    height: 100%;              /* fill column height */
-    width: auto;               /* preserve aspect ratio */
-    object-fit: contain;       /* no cropping */
+    max-height: 450px;                  /* adjust to match card height */
+    width: auto;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
