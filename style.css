@@ -122,6 +122,13 @@ html, body {
     align-items: start;                 /* align image with top of cards */
 }
 
+/* NEW WRAPPER — forces both cards into column 1, same row */
+.about-left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 /* LEFT COLUMN — stack both cards */
 .about-left {
     grid-column: 1;                     /* force both cards into column 1 */
